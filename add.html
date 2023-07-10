@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+        {% include 'header.html' %}
+        {% endblock %}
+    </head>
+    <body style="background-color:#f8f3f1">
+        {% from 'bootstrap5/form.html' import render_form %}
+        {% block content %}
+        <div class="content" style="margin:100px;">
+            <h1 class="heading">Add a Project</h1>
+        {{ render_form(form, novalidate=True) }}
+        </div>
+        {% endblock %}
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>

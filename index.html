@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+        {% include 'header.html' %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <div style="height:705px !important; background-image:url('/static/10-hero-image-website-ideas-to-inspire-you-9.png')" class="cover-container d-flex h-100 p-3 mx-auto flex-column text-center">
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading" style="margin-top:200px; margin-bottom:50px;">Hey, I'm Meg</h1>
+            <p class="lead">Junior Developer</p>
+              <p class="lead">Head to the Projects page to see my coding journey!</p>
+            <p class="lead">
+              <a href="{{ url_for('projects') }}" class="btn btn-lg btn-secondary">Projects</a>
+            </p>
+          </main>
+        </div>
+        {% endblock %}
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>
